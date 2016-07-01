@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Users</title>
+
+    <link rel="stylesheet" href="{{ app.request.basepath }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ app.request.basepath }}/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+<div class="container">
+    <table class='table'>
+        <tr><th>user_id</th>
+            <th>Всего заработано</th>
+            <th>Всего выплачено</th>
+            <th>8 периодов</th>
+            <th>Баланс</th>
+            <th>Выплатить сейчас</th>
+            <th>Выплатить в следующий раз</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.userId }}</td>
+                <td>{{ user.totalEarned }}</td>
+                <td>{{ user.totalPaid }}</td>
+                <td>{{ user.eightPeriods }}</td>
+                <td>{{ user.balance }}</td>
+                <td>{{ user.payNow }}</td>
+                <td>{{ user.payNext }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>

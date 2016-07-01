@@ -1,0 +1,22 @@
+{
+  "name": "Darkenery/MediaTechTask",
+  "description": "Test task for MediaTech",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Darkenery",
+      "email": "Darkenery@gmail.com"
+    }
+  ],
+
+  "require": {
+    "silex/silex": "v1.3.5",
+    "twig/twig": "~1.0",
+    "doctrine/dbal": "v2.5.4"
+  },
+
+  "autoload": {
+    "psr-0": {"TestTask": "src/"}
+  }
+}
